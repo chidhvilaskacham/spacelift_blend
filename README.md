@@ -1,8 +1,10 @@
 # spacelift_blend
 
-This repository demonstrates the integration of Terraform and Ansible within Spacelift to automate infrastructure provisioning and configuration management.
+This project demonstrates how to blend Terraform and Ansible in a unified pipeline using Spacelift. It showcases an Infrastructure as Code (IaC) workflow where Spacelift provisions infrastructure with Terraform and then seamlessly hands over to Ansible for post-provisioning configuration. Ideal for teams looking to integrate declarative and procedural tooling in a cloud-agnostic, automated CI/CD environment.
 
-Overview
+
+
+# Overview
 The spacelift_blend project showcases how to:
 
 Provision infrastructure using Terraform.
@@ -14,66 +16,36 @@ Leverage Spacelift to orchestrate the entire workflow seamlessly.
 This approach ensures a cohesive Infrastructure as Code (IaC) pipeline, enhancing automation and reducing manual intervention.
 GitHub
 
-Repository Structure
-tf-ansible-stack/: Contains the main stack configuration integrating Terraform and Ansible.
+# Repository Structure
+1. tf-ansible-stack/: Contains the main stack configuration integrating Terraform and Ansible.
+2. README.md: Provides an overview and guidance on setting up and using the project.
 
-README.md: Provides an overview and guidance on setting up and using the project.
-
-Prerequisites
+# Prerequisites
 Before getting started, ensure you have the following:
 
-A Spacelift account with necessary permissions.
+1. A Spacelift account with necessary permissions.
+2. Terraform installed locally for testing purposes.
+3. Ansible installed locally for testing purposes.
+4. Access to the infrastructure you intend to manage (e.g., AWS, Azure).
 
-Terraform installed locally for testing purposes.
-
-Ansible installed locally for testing purposes.
-
-Access to the infrastructure you intend to manage (e.g., AWS, Azure).
-GitHub
-+2
-docs.spacelift.io
-+2
-docs.spacelift.io
-+2
-GitHub
-
-Getting Started
+# Getting Started
 Clone the Repository:
-
-bash
-Copy
-Edit
+```sh
 git clone https://github.com/chidhvilaskacham/spacelift_blend.git
 cd spacelift_blend
-Set Up Spacelift Stack:
+```
+# Set Up Spacelift Stack:
+1. Log in to your Spacelift account.
+2. Create a new stack and connect it to your forked repository.
+3. Configure environment variables and backend settings as required.
 
-Log in to your Spacelift account.
+# Configure Terraform and Ansible:
 
-Create a new stack and connect it to your forked repository.
+1. Navigate to the tf-ansible-stack/ directory.
+2. Review and modify Terraform configurations to match your infrastructure needs.
+3. Update Ansible playbooks and inventory files as necessary.
 
-Configure environment variables and backend settings as required.
-GitHub
-+7
-docs.spacelift.io
-+7
-docs.spacelift.io
-+7
-GitHub
+# Trigger a Run:
 
-Configure Terraform and Ansible:
-
-Navigate to the tf-ansible-stack/ directory.
-
-Review and modify Terraform configurations to match your infrastructure needs.
-
-Update Ansible playbooks and inventory files as necessary.
-GitHub
-+1
-GitHub
-+1
-
-Trigger a Run:
-
-Push changes to the repository to trigger a Spacelift run.
-
-Monitor the run's progress and review logs for any issues.
+1. Push changes to the repository to trigger a Spacelift run.
+2. Monitor the run's progress and review logs for any issues.
